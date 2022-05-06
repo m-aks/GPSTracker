@@ -1,0 +1,108 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowActivityTransitions">true</item>
+
+        <item name="android:windowContentTransitions">true</item>
+
+        <item name="android:windowEnterTransition">@android:transition/slide_bottom</item>
+        <item name="android:windowExitTransition">@android:transition/slide_bottom</item>
+
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+    </style>
+
+    <style name="ToolBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="MainToolbar" parent="@style/ToolBar">
+        <item name="navigationIcon">@drawable/baseline_menu_white_24</item>
+    </style>
+
+    <style name="TrackToolbar" parent="@style/ToolBar">
+        <item name="navigationIcon">@drawable/baseline_arrow_back_white_24</item>
+    </style>
+
+    <style name="TrackCard">
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+    </style>
+
+    <style name="TextAppearance.MdcTypographyStyles.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textSize">96sp</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textSize">60sp</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textSize">34sp</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="TextAppearance.MdcTypographyStyles.Overline" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+</resources>

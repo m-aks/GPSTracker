@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">GPSTracker</string>
+    <string name="login_input_placeholder">Логин</string>
+    <string name="password_input_placeholder">Пароль</string>
+    <string name="login_error_text">Ошибка</string>
+    <string name="token_not_found">Токен не найден</string>
+    <string name="login_button_text">Войти</string>
+    <string name="date_item">Дата: </string>
+    <string name="time_item">Время: </string>
+    <string name="distance_item">Расстояние: </string>
+    <string name="distance_item_unit_km"> км</string>
+    <string name="distance_item_unit_m"> м</string>
+    <string name="average_speed">Средняя скорость: </string>
+    <string name="average_speed_kmh"> км/ч</string>
+    <string name="route_button_text">Маршрут</string>
+    <string name="speed_units_upper">КМ/Ч</string>
+    <string name="speed_value_text">СКОРОСТЬ</string>
+    <string name="ride_time_value_text">ВРЕМЯ ПОЕЗДКИ</string>
+    <string name="distance_value_text">РАССТОЯНИЕ</string>
+    <string name="average_speed_value_text">СРЕДНЯЯ СКОРОСТЬ</string>
+    <string name="email_input_placeholder">Email</string>
+    <string name="firstname_input_placeholder">Firstname</string>
+    <string name="lastname_input_placeholder">Lastname</string>
+    <string name="register_button_text">Register</string>
+</resources>

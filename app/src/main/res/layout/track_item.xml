@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.example.gpstracker.util.TimeConverter"/>
+        <import type="com.example.gpstracker.util.DistanceConverter"/>
+        <import type="com.example.gpstracker.util.SpeedConverter"/>
+        <import type="com.example.gpstracker.util.DateConverter"/>
+
+        <variable
+            name="viewModel"
+            type="com.example.gpstracker.viewModel.TrackItemViewModel"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+        <TextView
+            android:id="@+id/track_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:padding="4dp"
+            app:text="@{@string/date_item + DateConverter.convert(viewModel.date)}"
+            tools:text="Дата"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:padding="4dp"
+            app:text="@{@string/time_item + TimeConverter.convert(viewModel.time)}"
+            tools:text="Время: 1:46"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:padding="4dp"
+                app:text="@{@string/distance_item + DistanceConverter.convert(viewModel.distance)}"
+                tools:text="Расстояние: 5.8"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                app:text="@{viewModel.distance >= 1000 ? @string/distance_item_unit_km : @string/distance_item_unit_m}"
+                tools:text=" км"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:padding="4dp"
+            app:text="@{@string/average_speed + SpeedConverter.convert(viewModel.averageSpeed) + @string/average_speed_kmh}"
+            tools:text="Средняя скорость: 21.6 км/ч"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:textAllCaps="false"
+            tools:icon="@drawable/baseline_expand_more_white_18"
+            tools:iconGravity="textEnd"
+            android:text="@string/route_button_text"
+            android:onClick="@{(view) -> viewModel.showRoute(context)}"/>
+    </LinearLayout>
+</layout>

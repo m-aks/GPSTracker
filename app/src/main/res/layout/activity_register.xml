@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.example.gpstracker.viewModel.RegisterViewModel"/>
+    </data>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fitsSystemWindows="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="56dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/input_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="@string/login_input_placeholder"
+                    android:text="@={viewModel.login}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/input_firstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="@string/firstname_input_placeholder"
+                    android:text="@={viewModel.firstname}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/input_lastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="@string/lastname_input_placeholder"
+                    android:text="@={viewModel.lastname}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/input_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="@string/email_input_placeholder"
+                    android:text="@={viewModel.email}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/input_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="@string/password_input_placeholder"
+                    android:text="@={viewModel.password}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/login_error_text"
+                android:visibility="@{viewModel.errorFlag ? View.VISIBLE : View.GONE}"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@{viewModel.errorMessage}"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp"
+                android:text="@string/register_button_text"
+                android:enabled="@{!viewModel.empty}"
+                android:onClick="@{(view) -> viewModel.register(context)}"/>
+        </LinearLayout>
+    </ScrollView>
+</layout>

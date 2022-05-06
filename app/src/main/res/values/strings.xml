@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">GPSTracker</string>
+    <string name="login_input_placeholder">Login</string>
+    <string name="password_input_placeholder">Password</string>
+    <string name="login_error_text">Error</string>
+    <string name="token_not_found">Token not found</string>
+    <string name="login_button_text">Login</string>
+    <string name="date_item">Date: </string>
+    <string name="time_item">Time: </string>
+    <string name="distance_item">Distance: </string>
+    <string name="distance_item_unit_km"> km</string>
+    <string name="distance_item_unit_m"> m</string>
+    <string name="average_speed">Average speed: </string>
+    <string name="average_speed_kmh"> km/h</string>
+    <string name="route_button_text">Route</string>
+    <string name="speed_units_upper">KM/H</string>
+    <string name="speed_value_text">SPEED</string>
+    <string name="ride_time_value_text">TRAVEL TIME</string>
+    <string name="distance_value_text">DISTANCE</string>
+    <string name="average_speed_value_text">AVERAGE SPEED</string>
+    <string name="email_input_placeholder">Email</string>
+    <string name="firstname_input_placeholder">Firstname</string>
+    <string name="lastname_input_placeholder">Lastname</string>
+    <string name="register_button_text">Register</string>
+</resources>
