@@ -15,11 +15,11 @@ android {
     }
 
     signingConfigs {
-        release { //todo разобраться с этим и шрифтами
-            storeFile file("Key.jks") //ссылка на файл с ключами в корневой папке проекта
-            storePassword "123456" //пароль хранилища ключей
-            keyAlias "keyN" // keyAlias, который задавали при создания ключа
-            keyPassword "123456" //пароль ключа APK
+        release {
+            storeFile file("storeFile.jks")
+            storePassword "secretPassword"
+            keyAlias "keyAlias"
+            keyPassword "secretPassword"
         }
     }
 
@@ -31,7 +31,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release //подпись релизного APK
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
