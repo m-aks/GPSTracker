@@ -18,8 +18,8 @@
     <string name="ride_time_value_text">ВРЕМЯ ПОЕЗДКИ</string>
     <string name="distance_value_text">РАССТОЯНИЕ</string>
     <string name="average_speed_value_text">СРЕДНЯЯ СКОРОСТЬ</string>
-    <string name="email_input_placeholder">Email</string>
-    <string name="firstname_input_placeholder">Firstname</string>
-    <string name="lastname_input_placeholder">Lastname</string>
-    <string name="register_button_text">Register</string>
+    <string name="email_input_placeholder">Эл. адрес</string>
+    <string name="firstname_input_placeholder">Имя</string>
+    <string name="lastname_input_placeholder">Фамилия</string>
+    <string name="register_button_text">Регистрация</string>
 </resources>
