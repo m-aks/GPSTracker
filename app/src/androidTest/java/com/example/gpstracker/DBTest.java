@@ -25,11 +25,9 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class DBTest {
-    //private TrackDao trackDao;
-   // private RouteDao routeDao;
+
     private AppDatabase db;
 
-    private float speed;
     private float averageSpeed;
     private long distance;
     private long time;
@@ -42,8 +40,6 @@ public class DBTest {
     public void createDb() {
         Context context = ApplicationProvider.getApplicationContext();
         db = Room.inMemoryDatabaseBuilder(context, AppDatabase.class).build();
-        //trackDao = db.getTrackDao();
-        //routeDao = db.getRouteDao();
         distance = 1200;
         averageSpeed = (float) 3.45;
         time = 200;
@@ -57,8 +53,7 @@ public class DBTest {
     public void writeTrackEntity() {
         InsertTrackDataAsyncTask trackTask = new InsertTrackDataAsyncTask();
         try {
-            long userId = new GetActiveUserAsyncTask().execute().get().getId();
-            trackTask.execute(new TrackEntity(new Date(), distance, averageSpeed, time, userId));
+            trackTask.execute(new TrackEntity(new Date(), distance, averageSpeed, time, -1));
             trackTask.get();
         } catch (ExecutionException | InterruptedException e) {
             e.printStackTrace();

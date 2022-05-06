@@ -19,6 +19,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withId;
 public class UITest {
 
     private String stringLogin;
+    private String stringPassword;
 
     @Rule
     public ActivityScenarioRule<LoginActivity> activityRule
@@ -26,7 +27,8 @@ public class UITest {
 
     @Before
     public void initValidString() {
-        stringLogin = "testString";
+        stringLogin = "testUser";
+        stringPassword = "testPassword";
     }
     @Test
     public void pressButtonGo() {
@@ -40,7 +42,7 @@ public class UITest {
     @Test
     public void inputPassword() {
         onView(withId(R.id.input_password))
-                .perform(typeText(stringLogin), closeSoftKeyboard());
+                .perform(typeText(stringPassword), closeSoftKeyboard());
     }
 
 }
